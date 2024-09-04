@@ -81,9 +81,10 @@ void setup() {
 void loop() {
 
   particleSensor.heartrateAndOxygenSaturation(&SPO2, &SPO2Valid, &heartRate, &heartRateValid);
+  
   if(SPO2Valid == 1 && heartRateValid == 1){
     if (fingerFlag == 0) {
-      for (int i = 16; i >= 1; i--) {  // Loop from 4 down to 1
+      for (int i = 6; i >= 1; i--) {  // Loop from 4 down to 1
           display.clearDisplay();
           display.setCursor(30, 6);
           display.setTextSize(1);
